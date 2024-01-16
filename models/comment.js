@@ -28,6 +28,10 @@ const commentSchema = new mongoose.Schema({
     ref: 'Comment',
     default: null // Définition du champ comme étant nullable, par défaut à null
 },
+time: {
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date }
+},
 likes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
 dislikes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
 });

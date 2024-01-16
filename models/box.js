@@ -13,8 +13,13 @@ const boxSchema = new Schema({
         ref: "User",
         required: true,
       },
-      art: [{ type: mongoose.Schema.Types.ObjectId, ref: "Art",required:false }],
+      arts: [{ type: mongoose.Schema.Types.ObjectId, ref: "Art",required:false }],
       partnerAccess:[{ type: mongoose.Schema.Types.ObjectId, ref: "User",required:false }],
+      size: {
+        type: Number,
+        required: true,
+        enum: [1, 2]
+      }
 })    //check if there is a story of a person,its yes we adding him in the partnerAccess 
 
 const Box = mongoose.model("Box", boxSchema);

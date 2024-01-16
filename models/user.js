@@ -58,6 +58,15 @@ const userSchema = new Schema({
       default: false,
     },
   },
+  imageProfilUrl:{
+    type:String,
+    required:false
+   }
+  ,
+  time: {
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date }
+  },
   friends: [{ type: mongoose.Schema.Types.ObjectId, ref: "User",required:false }],
   subscribers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User",required:false }],
 });

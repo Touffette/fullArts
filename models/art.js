@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const artSchema = new Schema({
-  genre:{
+  genre:{//janeeeerreee
     type:string,
     required:true
   },
